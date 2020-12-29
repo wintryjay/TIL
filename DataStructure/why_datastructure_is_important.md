@@ -14,7 +14,7 @@
 * [1.6 집합](#집합-단-하나의-규칙이-효율성을-바꾼다)
 * [1.7 마무리](#마무리)
 
-[뒤로](https://github.com/wintryjay/TIL/DataStructure)
+[뒤로](https://github.com/wintryjay/TIL/tree/main/DataStructure)
 
 </br>
 
