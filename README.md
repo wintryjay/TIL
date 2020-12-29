@@ -10,5 +10,5 @@
 
 ## 분류
 ### DataStructure
-* [자료구조가 중요한 이유](https://github.com/hyunjay-dev/TIL/blob/main/DataStructure/why_datastructure_is_important.md)
-* [알고리즘이 중요한 이유](https://github.com/hyunjay-dev/TIL/blob/main/DataStructure/why_algorithm_is_important.md)
+* [자료구조가 중요한 이유](https://github.com/wintryjay/TIL/blob/main/DataStructure/why_datastructure_is_important.md)
+* [알고리즘이 중요한 이유](https://github.com/wintryjay/TIL/blob/main/DataStructure/why_algorithm_is_important.md)
