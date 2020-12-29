@@ -12,7 +12,7 @@
 * [2.4 이진 검색 vs 선형 검색](#이진-검색-vs-선형-검색)
 * [2.5 마무리](#마무리)
 
-[뒤로](https://github.com/wintryjay/TIL/DataStructure)
+[뒤로](https://github.com/wintryjay/TIL/tree/main/DataStructure)
 
 </br>
 
