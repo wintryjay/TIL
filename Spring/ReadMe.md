@@ -61,7 +61,8 @@
   * External Libraries 는 외부에서 라이브러리를 가져온 것인데 상당히 많다.
     * 요새 Gradle이나 Maven은 의존관계가 있는 라이브러리를 함께 다운로드(관리)해준다.
     * **스프링 부트 라이브러리**
-      * Dependencies 는 라이브러리와 의존관계를 알려줌(우리는 spring-boot-starter와 thymeleaf 2가지만 가져왔지만, 엄청 많다.)            * spring-boot-starter-web 라이브러리 하나를 땡겨오면, spring-boot-starter에 필요한 라이브러리를 다 가져와 core까지 가져와서</br>
+      * Dependencies 는 라이브러리와 의존관계를 알려줌(우리는 spring-boot-starter와 thymeleaf 2가지만 가져왔지만, 엄청 많다.)            
+      * spring-boot-starter-web 라이브러리 하나를 땡겨오면, spring-boot-starter에 필요한 라이브러리를 다 가져와 core까지 가져와서</br>
         스프링부트와 관련된 것이 다 세팅이 되서 돌아간다.
         * spring-boot-starter-tomcat: 톰캣(웹 서버)
           * 과거에는 WAS(ex. TOMCAT)를 직접 설치해서 자바 코드를 밀어넣어 웹서버와 개발 라이브러리를 완전히 분리했었음
