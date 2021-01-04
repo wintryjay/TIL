@@ -13,9 +13,14 @@
 * [자료구조가 중요한 이유](https://github.com/wintryjay/TIL/blob/main/DataStructure/why_datastructure_is_important.md)
 * [알고리즘이 중요한 이유](https://github.com/wintryjay/TIL/blob/main/DataStructure/why_algorithm_is_important.md)
 * [빅 오 표기법](https://github.com/wintryjay/TIL/blob/main/DataStructure/Big_O.md)
+* [빅 오로 코드 속도 올리기](https://github.com/wintryjay/TIL/blob/main/DataStructure/Faster_using_BigO.md)
+* [빅 오를 사용하거나 사용하지 않는 코드 최적화](https://github.com/wintryjay/TIL/blob/main/DataStructure/Code_Optimizaztion_Using_BigO_or_Not.md)
+
 
 ### SoftwareEngineering
+* [소프트웨어 공학 개론](https://github.com/wintryjay/TIL/tree/main/SoftwareEngineering/SWE_Intro)
 * [애자일 개발론](https://github.com/wintryjay/TIL/blob/main/SoftwareEngineering/What_is_the_agile.md)
+
 
 ### Spring
 * [스프링 입문](https://github.com/wintryjay/TIL/tree/main/Spring)
