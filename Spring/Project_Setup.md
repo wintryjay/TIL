@@ -147,10 +147,12 @@
   </body>
   </html>
   ```
-  * 컨트롤러에서 리턴 값으로 문자를 반환하면 `ViewResolver`가 화면을 찾아서 처리
-    * 스프링 부트 템플릿엔진 기본 viewName 매핑이 된다.
-    * `resources:templates/`+{ViewName}+`.html`
-    
+   * 동작 환경 그림 </br>
+   <img src = "https://user-images.githubusercontent.com/76747747/103603470-0a151b00-4f52-11eb-9e6f-e6b93b5c8c10.png" width="600px"></br>
+   * 컨트롤러에서 리턴 값으로 문자를 반환하면 `ViewResolver`가 화면을 찾아서 처리
+     * 스프링 부트 템플릿엔진 기본 viewName 매핑이 된다.
+     * `resources:templates/`+{ViewName}+`.html`
+
   > 참고: `spring-boot-devtools`라이브러리를 추가하면, `html`파일을 컴파일만 해주면 서버 재시작 없이 View 파일 변경 가능</br>
     IntelliJ 컴파일 방법: 메뉴 Build > Recompile
     
