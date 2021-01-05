@@ -4,6 +4,8 @@
  1. [사전 준비](#사전-준비)
  2. [IntelliJ](#IntelliJ)
  3. [라이브러리 살펴보기](#라이브러리-살펴보기)
+ 4. [View 환경설정](#View-환경설정)
+ 5. [빌드하고 실행하기](#빌드하고-실행하기)
  
 ## 사전 준비
   * Java 11
@@ -84,5 +86,84 @@
         * assertj : 테스트를 편하게 하기 위해 도와주는 것
         * 핵심은 JUnit Library 이다.
         * spring-test : 는 스프링과 통합해서 테스트할 수 있도록 해주는 라이브러리다.
+        
+## View 환경설정
+  1. Welcome Page 만들기 </br>
+    - `resources/static/index.html`에 html 파일을 넣어두면, Welcome Page를 만들어 준다.
+  ```html
+  <!DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Hello</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+      Hello
+      <a href="/hello">hello</a>
+    </body>
+  </html>
+  ```
+  2. 스프링 부트가 제공하는 Welcome Page 기능</br>
+    - `static/index.html`을 올려두면 Welcome Page 기능을 제공한다.</br>
+    - static 폴더에서 index.html을 먼저 찾고, 못찾으면 index 템플릿을 찾은 후, 자동적으로 웰컴페이지를 만들어준다.</br>
+    - [메뉴얼 이동](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-welcome-page)
+    
+  3. thymeleaf 템플릿 엔진</br>
+    - 템플릿 엔진을 사용하면, html 구조를 바꿀 수 있다.</br>
+    - [thymeleaf 공식 사이트](https://www.thymeleaf.org/)</br>
+    - [스프링 공식 튜토리얼](https://spring.io/guides/gs/serving-web-content)</br>
+    - [스프링부트 메뉴얼](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines)
 
+  4. 동작하고 프로그래밍 되는 간단한 화면을 만들어 보자.</br>
+  4.1 Contoller 생성</br>
+    - Controller :Web Application 의 첫 번째 진입점
+  `main/java/hello.hellospring/controller/HelloController`
+  ```java
+  @Controller
+  public class HelloController{
+  
+    @GetMapping("hello")
+    public String hello(Model model){
+      model.addAttribute("data", "hello!");
+      return "hello";
+    }
+  }
+  ```
+  
+&nbsp;&nbsp;&nbsp;&nbsp;  4.2 View 생성</br> 
+&nbsp;&nbsp;&nbsp;&nbsp;  `resources/templates/helllo.html`
+  ```html
+  <!DOCTYPE HTML>
+  <html xmlns:th="http://www.thymeleaf.org">
+  <!-- th: thymeleaf 를 의미하며, 선언하면 Template Engine으로 사용할 수 있다.-->
+  <html xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <title>Hello</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body>
+    <p th:text="'안녕하세요.' + ${data}"> 안녕하세요. 손님</p>
+    <!-- 위쪽의 키값인 data에 들어있는 Value값(hello!)이 치환되어 들어간다. -->
+  </body>
+  </html>
+  ```
+  * 컨트롤러에서 리턴 값으로 문자를 반환하면 `ViewResolver`가 화면을 찾아서 처리
+    * 스프링 부트 템플릿엔진 기본 viewName 매핑이 된다.
+    * `resources:templates/`+{ViewName}+`.html`
+    
+  > 참고: `spring-boot-devtools`라이브러리를 추가하면, `html`파일을 컴파일만 해주면 서버 재시작 없이 View 파일 변경 가능</br>
+    IntelliJ 컴파일 방법: 메뉴 Build > Recompile
+    
+ ## 빌드하고 실행하기
+  * 빌드를 해서 실제 실행할 수 있는 파일 만들기
+    * 서버 배포할 때는 이 파일만 복사해서 서버에 넣어주고, `java -jar`로 실행하면 서버에서 실행된다.
+    * 과거에는 서버에 톰캣을 설치하고, 특정 폴더에 WAR 같은 파일을 넣어야 했지만, 지금은 JAR 파일 하나만 넣고 실행시키면 끝이다.
+  * 콘솔(파일이 있는 폴더 위치)로 이동
+    0. 서버 닫은 후(
+    1. `./gradlew build`
+      * 잘 안되는 경우: `./gradlew clean build` : 'clean'을 사용하면 build 폴더를 지우고 새롭게 생성한다.
+    2. `cd build/libs`
+    3. `java -jar hello-spring-0.0.1-SNAPSHOT.jar`
+    4. 실행확인
+    5. `ls -arlth` 서버 닫기
 
