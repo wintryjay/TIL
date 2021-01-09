@@ -26,8 +26,8 @@
 * [스프링 입문](https://github.com/wintryjay/TIL/tree/main/Spring)
 
 ### Algorithm
-* [자바_코딩테스트](https://github.com/wintryjay/TIL/tree/main/Algorithm/Java)
 * [자바_코드업100](https://github.com/wintryjay/TIL/tree/main/Algorithm/Java/CodeUp100/src/com/codeup)
+* [자바_코딩테스트](https://github.com/wintryjay/TIL/tree/main/Algorithm/Java)
 
 ### Java
 * [객체지향](https://github.com/wintryjay/TIL/tree/main/Java)
