@@ -1,5 +1,5 @@
 /*
-# Question 05. MergeInterval (Array, Sort)
+# Question 05. MergeInterval (ArrayList, Sort)
     Eng: Given a collection of intervals, merge all overlapping intervals.
     Kor: 간격들의 집합이 있을 때, 겹치는 구간을 모두 병합시키세요.
 
