@@ -33,30 +33,30 @@ import java.util.Map;
 public class T02_TwoSum {
 
     public static void main(String[] args) {
-        // 1. 예제의 Input 값을 넣어 인자를 만들어준다.
         int[] nums = {2, 8, 11, 21};
         int target = 10;
 
-        // 2. 객체를 새로 만들어서 위에서 인자값으로 받는 메서드를 결과값으로 넣어준다.
         T02_TwoSum a = new T02_TwoSum();
         int[] result = a.solve(nums, target);
+        for(int i:result) System.out.println(i);
+
     }
 
-        // 3. 문제를 풀어줄 메서드를 만들어준다.
-    public int[] solve(int[] nums, int target) {
-
-        // 5. 4번을 하기 위해서 담을 그릇을 만들어 준다.
+    public int[] solve(int[] nums, int target){
         Map<Integer, Integer> map = new HashMap<>();
         int[] result = new int[2];
 
-        // 4. for문을 돌려준다.
-        for(int i=0; i<nums.length; i++){
-
+        for (int i = 0; i<nums.length;i++){
+            if(map.containsKey(nums[i])){
+                int mapValue = map.get(nums[i]);
+                result[0] = mapValue+1;
+                result[1] = i+1;
+            }else {
+                map.put(target-nums[i], i);
+            }
         }
-        return nums;
+        return result;
     }
 
-    public int[] twoSum(int[] nums, int target){
-
-    }
 }
+
